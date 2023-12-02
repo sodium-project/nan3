@@ -18,3 +18,5 @@ union __attribute__((reflect)) u3 {};
 
 //--- bad_attr.cpp
 int var1 __attribute__((reflect)) = 1; // expected-warning {{'reflect' attribute only applies to enums or classes}}
+[[reflect]] int var2 = 2; // expected-warning {{'reflect' attribute only applies to enums or classes}}
+[[nan3::reflect]] int var3 = 3; // expected-warning {{'reflect' attribute only applies to enums or classes}}
